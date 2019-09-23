@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #dedede; }
+
+#fileUploadForm .input {
+  padding: 10px;
+  display: block;
+  background: white;
+  position: relative;
+  z-index: 2; }
+  #fileUploadForm .input #fileInput {
+    display: none; }
+  #fileUploadForm .input #customFileInput {
+    display: inline-block;
+    background: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    padding-left: 47px;
+    background-image: url(../images/cloud.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 10px 9px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 10px;
+    border-radius: 3px; }
+  #fileUploadForm .input .submit {
+    margin: 10px;
+    border: none;
+    font: inherit;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background: black;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 3px; }
+    #fileUploadForm .input .submit.disabled {
+      background-color: #929292; }
+
+.preview {
+  display: block;
+  height: calc(100vh - 60px);
+  text-align: center;
+  background: #dedede;
+  background-image: url(../images/no-image.png);
+  background-size: 210px;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .preview .previewWrapper {
+    position: relative;
+    display: inline-block;
+    visibility: hidden; }
+  .preview #filePreview {
+    display: block; }
+  .preview #fileOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; }
+    .preview #fileOverlay .feedback {
+      position: absolute; }
+      .preview #fileOverlay .feedback i.button {
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        margin-left: -8px;
+        margin-top: -8px;
+        border-radius: 16px;
+        background-color: white;
+        border: 3px solid white;
+        -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 2px rgba(0, 0, 0, 0.2), 0 3px 7px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 2px rgba(0, 0, 0, 0.2), 0 3px 7px rgba(0, 0, 0, 0.2);
+        background: black;
+        cursor: pointer;
+        -webkit-transform: scale(2);
+                transform: scale(2);
+        opacity: 0;
+        -webkit-transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .preview #fileOverlay .feedback .comment-box {
+        display: block;
+        min-width: 250px;
+        min-height: 40px;
+        border-radius: 4px;
+        background: white;
+        -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 2px rgba(0, 0, 0, 0.2), 0 3px 7px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 2px rgba(0, 0, 0, 0.2), 0 3px 7px rgba(0, 0, 0, 0.2);
+        margin-top: -16px;
+        margin-left: 24px;
+        display: none;
+        font-weight: normal;
+        font-style: normal;
+        overflow: hidden; }
+        .preview #fileOverlay .feedback .comment-box textarea {
+          font: inherit;
+          border: none;
+          height: 40px;
+          min-width: 250px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 10px;
+          display: block;
+          resize: none; }
+          .preview #fileOverlay .feedback .comment-box textarea:focus {
+            outline: none; }
+      .preview #fileOverlay .feedback.visible i.button {
+        -webkit-transform: translateY(0) scale(1);
+                transform: translateY(0) scale(1);
+        opacity: 1; }
+      .preview #fileOverlay .feedback.open i.button {
+        background-color: #d4511d; }
+      .preview #fileOverlay .feedback.open .comment-box {
+        display: block; }
+  .preview.visible {
+    background-image: none; }
+    .preview.visible .previewWrapper {
+      visibility: visible;
+      cursor: copy; }
+
+pre {
+  background: white; }
